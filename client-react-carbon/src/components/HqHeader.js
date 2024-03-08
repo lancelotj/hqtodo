@@ -10,8 +10,8 @@ import {
   Switcher,
   SwitcherItem,
 } from "carbon-components-react";
-import { useHistory } from "react-router";
-import { AppSwitcher20, Book20 } from "@carbon/icons-react";
+import { useHistory } from "react-router-dom";
+import { Switcher as AppSwitcher, Book } from "@carbon/icons-react";
 import { slugify } from "../utils/slugify";
 
 const HqHeader = (props) => {
@@ -48,7 +48,7 @@ const HqHeader = (props) => {
           tooltipAlignment="end"
           onClick={() => linkHandler("/doc")}
         >
-          <Book20 />
+          <Book />
         </HeaderGlobalAction>
         {props.menuLinks && props.menuLinks.length > 0 && (
           <HeaderGlobalAction
@@ -56,7 +56,7 @@ const HqHeader = (props) => {
             onClick={() => setIsExpanded(!isExpanded)}
             isActive={isExpanded}
           >
-            <AppSwitcher20 />
+            <AppSwitcher />
           </HeaderGlobalAction>
         )}
       </HeaderGlobalBar>
